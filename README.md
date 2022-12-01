@@ -12,8 +12,9 @@ STEP 2 - Configure your machine
 Enter your LVM encryption passphrase, log in into your user.
 Now we are going to install necessary software and configure it.
 
-................................................................................
+........................................................
 substep 2.1 - Installing sudo & adding user in groups
+........................................................
 
 1) su - -> root password -> apt install sudo
 2) [$ adduser <yourusername> sudo] (yep, you should be in root)
@@ -22,9 +23,9 @@ substep 2.1 - Installing sudo & adding user in groups
 5) [$ sudo addgroup user42]
 6) [$ sudo adduser yourusername user42]
 7) [$ sudo apt update]
-................................................................................
-................................................................................
+........................................................
 substep 2.2 - Installing SSH
+........................................................
 
 1) [$ sudo apt install openssh-server]
 2) [$ sudo nano /etc/ssh/sshd_config] -> change line "#Port 22" to "Port 4242" and
@@ -32,18 +33,18 @@ substep 2.2 - Installing SSH
 (i hope you know how to do it in Nano...)
 3) [$ sudo nano /etc/ssh/ssh_config] -> change line "#Port 22" to "Port 4242"
 4) [$ sudo service ssh status]. It's should be active.
-................................................................................
-................................................................................
+........................................................
 substep 2.3 - Installing UFW
+........................................................
 
 1) [$ sudo apt install ufw]
 2) [$ sudo ufw enable]
 3) [$ sudo ufw allow 4242]
 4) [$ sudo ufw status]. It's should be active with 4242 and 4242(v6) ports allow
 from anywhere
-................................................................................
-................................................................................
+........................................................
 substep 3.4 - Configuring sudo
+........................................................
 
 1) [$ sudo visudo] (open  /etc/sudoers.tmp file)
 2) then write next lines and save:
@@ -57,9 +58,9 @@ substep 3.4 - Configuring sudo
   * Defaults      secure_path="that/long/paths/from/subject" *
   ************************************************************
                                                                   
-................................................................................
-................................................................................
+........................................................
 substep 3.5 - Setting up a strong password policy
+........................................................
                                                                   
 1) [$ sudo nano /etc/login.desf] (open login.defs file)
 2) replace next lines :
@@ -85,8 +86,6 @@ PASS_WARN_AGE is 7 by default so we just ignore it
 * [$ passwd]      * <- change user password
 * [$ sudo passwd] * <- change root password
 *******************
-  
-................................................................................
 
 --------------------------------------------------------------------------------
 STEP 4 - Network adapter configuration
