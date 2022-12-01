@@ -11,14 +11,21 @@
 # monitoring.sh script #
 ************************
 
-  To make this works u need to [$ chmod +x monitoring.sh]. 
+  To make this works u need to 
+  
+  1) [$ chmod +x monitoring.sh]. 
+  
   Please note that you should run script as root because journalctl won't
   work from user without sudo.
 
 # How to use
 1) First off all :
+
   [$ sudo crontab -e] (yep, you need sudo to make cron runnig script as root).
+
   [$ crontab -e] will open another file that will run your script as user).
+  
+  
 2) add next lines in your crontab file:
   *********************************************
   @reboot /path/to/file/monitoring.sh
