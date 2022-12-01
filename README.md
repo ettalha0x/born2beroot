@@ -23,6 +23,7 @@ substep 2.1 - Installing sudo & adding user in groups
 5) [$ sudo addgroup user42]
 6) [$ sudo adduser yourusername user42]
 7) [$ sudo apt update]
+  
 ........................................................
 substep 2.2 - Installing SSH
 ........................................................
@@ -33,6 +34,7 @@ substep 2.2 - Installing SSH
 (i hope you know how to do it in Nano...)
 3) [$ sudo nano /etc/ssh/ssh_config] -> change line "#Port 22" to "Port 4242"
 4) [$ sudo service ssh status]. It's should be active.
+  
 ........................................................
 substep 2.3 - Installing UFW
 ........................................................
@@ -42,6 +44,7 @@ substep 2.3 - Installing UFW
 3) [$ sudo ufw allow 4242]
 4) [$ sudo ufw status]. It's should be active with 4242 and 4242(v6) ports allow
 from anywhere
+  
 ........................................................
 substep 3.4 - Configuring sudo
 ........................................................
@@ -115,6 +118,7 @@ CONCLUSION
 And after all of this manipulations we finally came for our monitoring.sh script
 All guidelines is already exists in README.md file.
 
+  
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Dont forget to make a clone or snapshot of your VM before evaluation !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
