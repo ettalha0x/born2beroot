@@ -69,9 +69,9 @@ substep 3.5 - Setting up a strong password policy
 2) replace next lines :
                                                                   
 *************************************************
-* PASS_MAX_DAYS    99999 -> PASS_MAX_DAYS    30 * <- line 160 you can easly
-* PASS_MIN_DAYS    0     -> PASS_MIN_DAYS    2  *    reach it with ctrl+_ in
-*************************************************    nano
+* PASS_MAX_DAYS    99999 -> PASS_MAX_DAYS    30 *
+* PASS_MIN_DAYS    0     -> PASS_MIN_DAYS    2  *
+*************************************************
   
 PASS_WARN_AGE is 7 by default so we just ignore it 
 3) [$ sudo apt install libpam-cracklib] (install libpam cracklib so we have more option for password policy)
@@ -119,6 +119,6 @@ And after all of this manipulations we finally came for our monitoring.sh script
 All guidelines is already exists in README.md file.
 
   
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Dont forget to make a clone or snapshot of your VM before evaluation !
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
